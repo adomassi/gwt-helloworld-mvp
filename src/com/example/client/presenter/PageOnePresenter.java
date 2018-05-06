@@ -130,7 +130,7 @@ public class PageOnePresenter implements Presenter {
 	private void initDataGrid()
 	{		
 		dataGrid = display.getDataGrid();		
-		dataGrid.addColumn(valueColumn, "Rezultatas");	
+		dataGrid.addColumn(valueColumn, "Result");	
 		dataGrid.setColumnWidth(valueColumn, 900, Unit.PX);	
 		dataGrid.setRowData(new ArrayList<String>());
 	}
