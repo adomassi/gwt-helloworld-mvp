@@ -28,8 +28,7 @@ public class PageOnePresenter implements Presenter {
 		HasValue<String> getinputTextValue();		
 		Widget asWidget();
 	}
-
-	TextSort text;
+	
 	private final Display display;
 	private final Storage stockStorage;
 	private DataGrid<String> dataGrid = null;	
