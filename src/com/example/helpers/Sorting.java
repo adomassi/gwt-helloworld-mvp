@@ -11,7 +11,7 @@ public class Sorting {
 		
 		 for (String item : Arrays.asList(inputText.split("\n", -1)))
          {	
-			 List<String> firstItem = Arrays.asList(item.split("\\t"));		
+			 List<String> firstItem = Arrays.asList(item.split("\\t", -1));		
 			 res.add(firstItem);
          }         
 		
@@ -20,7 +20,7 @@ public class Sorting {
 		 List<String> finalres = new ArrayList<String>();
 		 for (List<String> item : res)
 		 {
-			 String s = Arrays.deepToString(item.toArray()).replace(",", "\t");				
+			 String s = Arrays.deepToString(item.toArray()).replace(",", "\t");					 
 			 String resz = s.substring(1, s.length()-1);			 
 			 finalres.add(resz);
 		 }

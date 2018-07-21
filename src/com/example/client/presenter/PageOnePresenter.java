@@ -75,8 +75,11 @@ public class PageOnePresenter implements Presenter {
 	}
 	
 	private void addTabToTextArea()
-	{
-		this.display.getTextArea().setValue(this.display.getTextArea().getValue() + "\t");
+	{		
+		TextArea textArea = this.display.getTextArea();				
+		Integer position = textArea.getCursorPos();		
+		textArea.setValue((new StringBuffer(textArea.getValue()).insert(position, "\t").toString()));		
+		textArea.setCursorPos(position + "\t".length());	
 	}
 	
 	private TextColumn<String> valueColumn = new TextColumn<String>() {
